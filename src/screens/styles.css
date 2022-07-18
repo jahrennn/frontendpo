@@ -1,0 +1,14 @@
+h3{
+    color: black;
+    font-family: 'Anton', sans-serif;
+font-family: 'Gulzar', serif;
+font-family: 'Oswald', sans-serif;
+}
+
+li{
+   list-style-type: none;
+}
+
+li.all{
+    color: black;
+}
