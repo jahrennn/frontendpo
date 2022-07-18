@@ -96,7 +96,7 @@ export default function ProductEditScreen() {
     try {
       dispatch({ type: 'UPDATE_REQUEST' });
       await axios.put(
-        `/api/products/${productId}`,
+        `https://athletesole.herokuapp.com/api/products/${productId}`,
         {
           _id: productId,
           name,
