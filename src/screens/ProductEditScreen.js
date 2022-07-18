@@ -69,7 +69,7 @@ export default function ProductEditScreen() {
     const fetchData = async () => {
       try {
         dispatch({ type: 'FETCH_REQUEST' });
-        const { data } = await axios.get(`/api/products/${productId}`);
+        const { data } = await axios.get(`https://athletesole.herokuapp.com/api/products/${productId}`);
         setName(data.name);
         setSlug(data.slug);
         setPrice(data.price);

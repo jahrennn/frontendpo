@@ -63,7 +63,7 @@ function ProductScreen() {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const result = await axios.get(`/api/products/slug/${slug}`);
+        const result = await axios.get(`https://athletesole.herokuapp.com/api/products/slug/${slug}`);
         dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
       } catch (err) {
         dispatch({ type: 'FETCH_FAIL', payload: getError(err) });
@@ -80,7 +80,7 @@ function ProductScreen() {
         try {
       dispatch({ type: 'UPDATE_REQUEST' });
       await axios.put(
-        `/api/products/${product._id}`,
+        `https://athletesole.herokuapp.com/api/products/${product._id}`,
         {
           size
         },
@@ -98,7 +98,7 @@ function ProductScreen() {
       dispatch({ type: 'UPDATE_FAIL' });
     }
     
-    const { data } = await axios.get(`/api/products/${product._id}`);
+    const { data } = await axios.get(`https://athletesole.herokuapp.com/api/products/${product._id}`);
     if (data.countInStock < quantity) {
       window.alert('Sorry. Product is out of stock');
       return;
@@ -118,7 +118,7 @@ function ProductScreen() {
     }
     try {
       const { data } = await axios.post(
-        `/api/products/${product._id}/reviews`,
+        `https://athletesole.herokuapp.com/api/products/${product._id}/reviews`,
         { rating, comment, name: userInfo.name },
         {
           headers: { Authorization: `Bearer ${userInfo.token}` },
