@@ -287,10 +287,7 @@ export default function OrderScreen() {
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <Row>
-                    <Col>Tax</Col>
-                    <Col>₱{order.taxPrice}</Col>
-                  </Row>
+                 
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
