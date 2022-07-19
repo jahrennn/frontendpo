@@ -130,7 +130,7 @@ function App() {
                     </NavDropdown>
                   ) : (
                     <Link className="nav-link" to="/">
-                  
+                      Sign In
                     </Link>
                   )}
                   {userInfo && userInfo.isAdmin && (
