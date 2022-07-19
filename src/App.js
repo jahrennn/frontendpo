@@ -129,7 +129,7 @@ function App() {
                       </Link>
                     </NavDropdown>
                   ) : (
-                    <Link className="nav-link" to="/">
+                    <Link className="nav-link" to="/signin">
                       Sign In
                     </Link>
                   )}
